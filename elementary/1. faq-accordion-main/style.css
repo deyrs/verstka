@@ -1,0 +1,127 @@
+/* reset */
+:root {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+*:not(strong) {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* General styles */
+body {
+    --clr-neutral-light-pink: hsl(275, 100%, 97%);
+
+    --ff-primary: 'Work Sans', sans-serif;
+
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    background-color: var(--clr-neutral-light-pink);
+
+    margin: auto;
+    position: relative;
+
+}
+
+.bg-image {
+    background-image: url("assets/images/background-pattern-desktop.svg");
+    height: 35vmin;
+}
+/* Component styles */
+
+.accordion {
+
+
+
+
+    --accordion-clr-primary: var(--clr-primary, hsl(292, 42%, 14%));
+    --accordion-clr-neutral: var(--clr-neutral, hsl(292, 40%, 68%));
+    --accordion-bg-clr: white;
+
+    font-family: var(--ff-primary);
+    color: var(--accordion-clr-primary);
+
+    background-color: var(--accordion-bg-clr);
+
+    --padding: 1em;
+    width: min(700px, calc(100% - 2*var(--padding)));
+    padding: var(--padding);
+    margin-inline: auto;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    position: relative;
+    top: -5em;
+}
+.accordion img {
+    max-width: fit-content;
+}
+.accordion__title {
+    font-size: 2em;
+    font-weight: var(--fw-bold);
+
+    display: flex;
+    align-items: center;
+    gap: 0.55em;
+}
+@media (width < 500px) {
+    .accordion{ font-size: .8em; }
+}
+.accordion__title img {
+    height: 1em;
+}
+
+.accordion hr {
+    height: 1px;
+    border: 0;
+    background-color: hsl(275, 100%, 97%);
+}
+.question {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75em;
+
+}
+.question__body {
+    font-weight: var(--fw-semibold);
+    color: var(--accordion-clr-primary);
+    font-size: 1.1em;
+}
+.question__button {
+    border: none;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #f4e6fa;
+}
+.question__button:hover {
+    background-color: rgba(205, 162, 238, 0.5);
+}
+
+.answer {
+    color: hsla(292, 42%, 14%, 60%);
+    padding-block: 1em;
+
+    display: none;
+}
+.answer_expanded {
+    display: block;
+}
