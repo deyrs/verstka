@@ -119,6 +119,9 @@ header {
     }
 }
 @media (width > 700px) {
+    .wrapper {
+        margin-block: 2%
+    }
     .menu__button {
         display: none;
     }
