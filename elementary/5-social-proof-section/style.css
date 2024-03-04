@@ -1,0 +1,186 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+
+}
+.wrapper {
+    margin: 9% auto;
+    width: min(1100px, 100% - 3rem);
+}
+
+.social-proof {
+    --clr-primary-400: hsl(333, 80%, 67%);
+    --clr-primary-700: hsl(300, 43%, 22%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(300, 24%, 96%);
+    --clr-neutral-500: hsl(303, 10%, 53%);
+/*    400, 500, 700*/
+
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.9375rem;
+}
+.hero {
+    text-align: center;
+    color: var(--clr-primary-700);
+}
+
+
+.main-info > * + * {
+    margin-top: 1em;
+}
+.main-info__heading {
+    font-size: 2.1em;
+    line-height: 0.8;
+    font-weight: 700;
+}
+.main-info__description {
+
+    color: var(--clr-neutral-500);
+}
+.ratings > * {
+    border-radius: 7px;
+
+    margin: 1em auto;
+}
+.rate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-block: 0.8em;
+    padding-inline: 1.5em;
+
+    background: var(--clr-neutral-200);
+
+    font-size: 0.9375rem;
+    line-height: 1.3;
+}
+.rate > * {
+    vertical-align: middle;
+}
+.rate__stars > * {
+    display: inline;
+}
+.rate__description {
+    font-weight: 700;
+}
+
+.reviews > * + * {
+    margin-top: 1em;
+}
+
+.review-card {
+    border-radius: 7px;
+
+    padding: 2em;
+
+    background: var(--clr-primary-700);
+
+    font-size: 0.9375rem;
+}
+.review-card > * + * {
+    padding-top: 1.7em;
+}
+.person {
+    display: flex;
+    gap: 1.3rem;
+    align-items: center;
+
+    font-weight: 700;
+}
+.person__photo {
+    border-radius: 50%;
+    max-height: 2.8em;
+}
+.person__name {
+    color: var(--clr-neutral-100);
+}
+.person__additional-info {
+    color: var(--clr-primary-400)
+}
+
+.review-card__review {
+    font-weight: 500;
+    color: var(--clr-neutral-200)
+}
+
+@media (width > 1000px) {
+    .social-proof {
+        font-size: 1.1rem;
+    }
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        margin-bottom: 2em;
+
+        text-align: left;
+    }
+    .main-info {
+        margin-right: 15%;
+    }
+    .main-info > * + * {
+        margin-top: 1em;
+    }
+    .main-info__heading {
+        font-size: 2.5em;
+    }
+    .rate {
+        max-width: 64%;
+        margin-left: 18%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 1em;
+    }
+    .rate:first-child {
+        margin-left: 9%;
+    }
+    .rate:last-child {
+        margin-left: 27%;
+    }
+    .reviews > * + * {
+        margin-top: unset;
+     }
+    .reviews {
+        display: flex;
+        gap: 1.5em;
+        padding-block: 2em;
+    }
+    .reviews > div:nth-child(2)::before {
+        content: " ";
+        display: block;
+        height: 1em;
+    }
+    .reviews > div:nth-child(2)::after {
+        content: " ";
+        display: block;
+        height: 1em;
+    }
+    .reviews > div:nth-child(2)::before {
+        content: " ";
+        display: block;
+        height: 1em;
+    }
+    .reviews > div:nth-child(3)::before {
+        content: " ";
+        display: block;
+        height: 2em;
+    }
+
+}

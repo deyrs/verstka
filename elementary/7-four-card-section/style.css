@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+img {
+    width: 100%;
+    display: block;
+}
+
+section {
+    margin: 3% auto;
+    width: min(1200px, 100% - 3rem);
+
+    --clr-neutral-100: hsl(0, 0%, 98%);
+    --clr-neutral-300: hsl(229, 6%, 66%);
+    --clr-neutral-700: hsl(234, 12%, 34%);
+
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+
+
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 0.5em;
+
+    font-size: 1.7em;
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--clr-neutral-700)
+}
+span {
+    font-weight: 200;
+    color: var(--clr-neutral-700)
+}
+p {
+    margin-bottom: 1.8em;
+
+    font-weight: 400;
+    color: var(--clr-neutral-300)
+}
+
+.cards {
+    font-size: 15px;
+}
+.cards h1 {
+    font-size: 1.6em;
+}
+.card img {
+    max-width: 70px;
+}
+
+.card {
+    box-shadow: 0 8px 15px 1px hsl(231, 37%, 90%);
+    border-radius: 6px;
+    padding: 2em;
+
+    text-align: left;
+}
+@media (width <= 560px) {
+    .card {
+        margin-bottom: 1.5em;
+    }
+}
+@media (width > 560px) {
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+    .card img {
+        margin-top: auto;
+    }
+}
+@media (width > 816px) {
+    p:not(.card p) {
+        max-width: 60%;
+        margin-inline: auto;
+
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(4, 0.5fr);
+        gap: 2em
+    }
+    .card:nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+    }
+    .card:nth-child(2) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3
+    }
+    .card:nth-child(3) {
+        grid-column: 2 / 3;
+        grid-row: 3 / 5
+    }
+    .card:nth-child(4) {
+        grid-column: 3 / 4;
+        grid-row: 2 / 4;
+    }
+}
+.card img {
+    margin-left: auto;
+}
+.card:nth-child(1) {
+    border-top: 4px solid var(--cyan)
+}
+.card:nth-child(2) {
+    border-top: 4px solid var(--red)
+}
+.card:nth-child(3) {
+    border-top: 4px solid var(--orange)
+}
+.card:nth-child(4) {
+    border-top: 4px solid var(--blue)
+}

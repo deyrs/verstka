@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="interactive-rating">
+
+    <!-- Rating state end -->
+
+    <div class="rating" >
+      <img src="images/icon-star.svg" alt="" class="encircled rating-img">
+      <h1 class="interactive-rating__title">How did we do?</h1>
+      <p class="interactive-rating__par">
+        Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!
+      </p>
+      <div class="rating__rate-buttons">
+        <button type="button" class="button encircled">1</button>
+        <button type="button" class="button encircled">2</button>
+        <button type="button" class="button encircled">3</button>
+        <button type="button" class="button encircled">4</button>
+        <button type="button" class="button encircled">5</button>
+      </div>
+      <button class="button button_submit">Submit</button>
+    </div>
+
+    <!-- Thank you state start -->
+
+    <div class="thank-you display-none">
+      <img src="images/illustration-thank-you.svg" alt="" class="thank-you-img">
+      <p class="interactive-rating__par interactive-rating__par_orange">You selected <span class="your-rate">x</span> out of 5</p>
+      <h1 class="interactive-rating__title">Thank you!</h1>
+      <p class="interactive-rating__par">We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!</p>
+    </div>
+
+  </div>
+
+<script>
+  function rate() {
+    rateButtons.forEach(button => {
+      if (button.classList.contains('button_chosen')) button.classList.remove('button_chosen');
+    })
+    this.classList.add('button_chosen');
+    storedRate = this.textContent;
+    console.log(storedRate)
+  }
+
+  let storedRate;
+  const rateButtons = document.querySelectorAll('.button.encircled');
+  rateButtons.forEach(button => button.addEventListener("click", rate));
+
+
+  function submit() {
+    if (storedRate !== undefined) {
+      (document.querySelector(".rating").classList.add("display-none"));
+      (document.querySelector(".thank-you").classList.remove("display-none"));
+      const yourRate = document.querySelector(".your-rate");
+      yourRate.textContent = storedRate;
+    } else {
+      alert("You must choose a number.")
+    }
+  }
+
+  const submitButton = document.querySelector('.button_submit');
+  submitButton.addEventListener("click", submit)
+
+</script>
+</body>
+</html>

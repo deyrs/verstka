@@ -3,13 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+        details {
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            padding: 0.5em 0.5em 0;
+            max-width: 25%;
+        }
+
+        summary {
+            font-weight: bold;
+            margin: -0.5em -0.5em 0;
+            padding: 0.5em;
+        }
+
+        details[open] {
+            padding: 0.5em;
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid #aaa;
+            margin-bottom: 0.5em;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+    </style>
 </head>
 <body>
 
-<h2>Элементы</h2>
-<ol>
-    <li><a href="elementary/1-faq-accordion-main/index.html">faq</a></li>
-</ol>
+<details>
+    <summary>Элементы</summary>
+    <ul>
+        <li><a href="elementary/8-news-homepage">news-homepage</a></li>
+        <li><a href="elementary/7-responsive-four-card-section">four-card-section</a></li>
+        <li><a href="elementary/6-responsive-interactive-article">nteractive-article</a></li>
+        <li><a href="elementary/5-responsive-social-proof-section">social-proof-section</a></li>
+        <li><a href="elementary/4-responsive-product-preview-card">product-preview-card</a></li>
+        <li><a href="elementary/3-responsive-stats-preview-card">stats-preview-card</a></li>
+        <li><a href="elementary/2-interactive-rating">interactive-rating</a></li>
+        <li><a href="elementary/1-faq-accordion-main/index.html">faq-accordion</a></li>
+    </ul>
+</details>
+
 
 </body>
 </html>
