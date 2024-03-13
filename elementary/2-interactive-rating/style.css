@@ -17,18 +17,10 @@ img {
     max-width: 100%;
     display: block;
 }
-body {
-    background-color: hsl(216, 12%, 8%);
-
-    align-items: center;
-    justify-content: center;
-
-    display: flex;
-
-    height: 100vh;
-
-}
 .interactive-rating {
+    margin: 7% auto;
+    width: min(375px, 100% - 3rem);
+
     --interactive-rating-clr-primary: hsl(25, 97%, 53%);
     --interactive-rating-clr-neutral-200: hsl(217, 12%, 63%);
     --interactive-rating-clr-neutral-300: hsl(216, 12%, 54%);
@@ -43,9 +35,7 @@ body {
     --fw-regular: 400;
     --fw-bold: 700;
 
-    max-width: 375px;
     padding: 1.5rem;
-    margin-inline: 1em;
 
     font-family: var(--ff-primary);
 
