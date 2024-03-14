@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div><a href="https://www.figma.com/file/bSxMNm0CRXFcHQzke8C8W5/ROBO-SCHOOL?type=design&node-id=0%3A1&t=CitCwIZKBPfoUHLA-1">Ссылка на макет</a></div>
+<header class="header">
+    <div class="header__wrapper header__wrapper_hide site-wrapper">
+        <div class="logo">ROBO.SCHOOL</div>
+        <div class="dropdown">
+            <button class="dropdown__button"></button>
+            <div class="dropdown__drawer">
+                <ul>
+                    <li><a href="">О школе</a></li>
+                    <li><a href="">Тренеры</a></li>
+                    <li><a href="">Стоимость</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tel">
+            <button class="tel__button"></button>
+            <a class="tel__number" href="tel:+78000001122">+7 800 000 11 22</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="generic-section hero">
+        <div class="hero__wrapper site-wrapper">
+            <div class="hero__textual">
+                <h1 class="generic-section__title hero__title">ROBO SCHOOL</h1>
+                <p>Курсы повышения квалификации по робототехнике для педагогов начальной школы</p>
+                <button class="button hero__button">Записаться на курс</button>
+            </div>
+            <img src="assets/hero__image.png" alt="" class="hero__image">
+        </div>
+    </section>
+
+    <section class="generic-section about-us">
+        <div class="site-wrapper">
+            <h2 class="generic-section__title about-us__title"><b>Robo School</b> – учреждение для формирования кадрового педагогического резерва в сфере робототехники и программирования</h2>
+            <ul class="generic-section__list">
+                <li>
+                    <span class="generic-section__span about-us__span">10</span>
+                    <p>УМК по различным направлениям по робототехнике</p>
+                </li>
+                <li>
+                    <span class="generic-section__span about-us__span">20</span>
+                    <p>Школ, в которых запущена робототехника</p>
+                </li>
+                <li>
+                    <span class="generic-section__span about-us__span">100</span>
+                    <p>Педагогов прошедших курсы повышения квалификации</p>
+                </li>
+                <li>
+                    <span class="generic-section__span about-us__span">10 000</span>
+                    <p>Педагогов прошедших курсы повышения квалификации</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="generic-section expectations">
+        <div class="site-wrapper">
+            <h2 class="generic-section__title">Что вы получите после курса</h2>
+            <ul class="generic-section__list">
+                <li>
+                    <span class="generic-section__span">Удостоверение</span>
+                    <p>Дающее право преподавать робототехнику для детей 6-12 лет в образовательных учреждениях</p>
+                </li>
+                <li>
+                    <span class="generic-section__span">Знания</span>
+                    <p>По основам разработки учебно-методических комплексов
+                        по робототехнике и программированию</p>
+                </li>
+                <li>
+                    <p class='expectations__popup-message' style="display: none">При наличии свободных мест</p>
+                    <span class="generic-section__span">Практику</span>
+                    <p>Возможность пройти практику по преподаванию робототехники на базе R:ED LAB (в оффлайн или онлайн формате)</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="generic-section coaches">
+        <div class="coaches__wrapper site-wrapper">
+            <h2 class="generic-section__title">Профессиональные тренеры</h2>
+            <ul class="coaches__list">
+                <li class="coach">
+                    <img src="assets/coaches/1.jpeg" alt="" class="coach__photo">
+                    <span class="generic-section__span">Ирина Лайм</span>
+                    <p>преподаватель по робототехнике</p>
+                    <span class="coach__show-more">Подробнее</span>
+                </li>
+                <li class="coach">
+                    <img src="assets/coaches/2.jpeg" alt="" class="coach__photo">
+                    <span class="generic-section__span">Марина Орлова</span>
+                    <p>преподаватель по робототехнике</p>
+                    <span class="coach__show-more">Подробнее</span>
+                </li>
+                <li class="coach">
+                    <img src="assets/coaches/3.jpeg" alt="" class="coach__photo">
+                    <span class="generic-section__span">Максим Петров</span>
+                    <p>преподаватель по программированию</p>
+                    <span class="coach__show-more">Подробнее</span>
+                </li>
+                <li class="coach">
+                    <img src="assets/coaches/4.jpeg" alt="" class="coach__photo">
+                    <span class="generic-section__span">Константин Назаров</span>
+                    <p>преподаватель по робототехнике</p>
+                    <span class="coach__show-more">Подробнее</span>
+                </li>
+                <li class="coach">
+                    <img src="assets/coaches/5.jpeg" alt="" class="coach__photo">
+                    <span class="generic-section__span">Лиза Весенняя</span>
+                    <p>преподаватель по программированию</p>
+                    <span class="coach__show-more">Подробнее</span>
+                </li>
+            </ul>
+            <div class="coaches__buttons">
+                <button class="coaches__scroll-button coaches__scroll-button_left"></button>
+                <button class="coaches__scroll-button coaches__scroll-button_right"></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="generic-section tariffs">
+        <div class="tariffs__wrapper site-wrapper">
+            <h2 class="generic-section__title">Выберите нужный пакет</h2>
+            <ul class="generic-section__list tariffs__list">
+                <li class="tariff">
+                    <h3 class="generic-section__span tariff__name">– PRO –</h3>
+                    <span class="generic-section__title tariff__price">20.000 ₽</span>
+                    <p>УМК по робототехнике и программированию</p>
+                    <button class="button tariff__button">Оставить заявку</button>
+                </li>
+                <li class="tariff">
+                    <h3 class="generic-section__span tariff__name">– ROBO –</h3>
+                    <span class="generic-section__title tariff__price">15.000 ₽</span>
+                    <p>УМК по робототехнике </p>
+                    <button class="button tariff__button">Оставить заявку</button>
+                </li>
+                <li class="tariff">
+                    <h3 class="generic-section__span tariff__name">– PROG –</h3>
+                    <span class="generic-section__title tariff__price">10.000 ₽</span>
+                    <p>УМК по программированию</p>
+                    <button class="button tariff__button">Оставить заявку</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="generic-section sign-up">
+        <div class="sign-up__wrapper site-wrapper">
+             <div class="sign-up__textual">
+                 <h2 class="sign-up__title">Запишитесь на курс со скидкой 10%</h2>
+                 <p>Акция действительна до 10 марта 2022 года</p>
+             </div>
+            <form action="" class="sign-up__form">
+                <input type="text" placeholder="Имя">
+                <input type="tel" placeholder="Телефон">
+                <input type="email" placeholder="E-mail">
+                <button type="submit" class="button sign-up__button">Оформить заявку</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__layout site-wrapper">
+         <div class="footer__top">
+             <div class="logo">ROBO.SCHOOL</div>
+             <div class="tel">
+                 <a class="tel__number" href="tel:+78000001122">+7 800 000 11 22</a>
+             </div>
+         </div>
+        <small>© ROBO.SCHOOL</small>
+    </div>
+</footer>
+
+
+<script>
+    const coachesList = document.querySelectorAll('.coaches__list');
+    const coachesWidth = coachesList[0].scrollLeftMax;
+
+    function scrollCoaches() {
+        console.log(this.className)
+        if (this.className.includes('left')) {
+            coachesList[0].scrollLeft -= coachesWidth / 2;
+        } else {
+            coachesList[0].scrollLeft += coachesWidth / 2;
+        }
+        console.log(coachesList[0].scrollLeft)
+
+    }
+
+    const coachesButtons = document.querySelectorAll('.coaches__scroll-button');
+    coachesButtons.forEach(button => button.addEventListener('click', scrollCoaches));
+</script>
+</body>
+</html>
