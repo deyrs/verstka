@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,100..1000&family=Epilogue:wght@100..900&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link href="./output.css" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+</head>
+<body class="font-epilogue text-neutral-500">
+<div class="flex justify-between items-start p-4 w-full fixed md:hidden">
+  <img src="../images/logo.svg" alt="">
+  <button class="md:hidden" onclick="{this.children[0].classList.toggle('hidden'); this.children[1].classList.toggle('hidden');}">
+    <img src="../images/icon-menu.svg" alt="" class="h-6 w-7 object-contain">
+    <img src="../images/icon-close-menu.svg" alt="" class="h-6 w-6 object-contain hidden">
+  </button>
+</div>
+
+<div>
+  <div class="bg-red-400 md:hover:*:text-neutral-700 overflow-visible h-dvh md:h-auto flex flex-col p-4 pt-12 md:p-4 md:flex-row gap-x-8 gap-y-4 max-w-[60%] sm:max-w-[40%] ml-auto md:max-w-full md:ml-0">
+    <img src="../images/logo.svg" alt="" class="hidden md:block">
+    <div class="relative cursor-pointer" onclick="this.children[1].classList.toggle('hidden')">
+      <div class="flex gap-x-2 items-center">Features<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+      </svg>
+      </div>
+      <div class="relative hidden md:absolute md:top-8 md:-left-8 px-4 pt-2 md:py-3.5 *:py-0.5 *:block *:whitespace-nowrap border rounded-md border-transparent md:shadow-[0_0_30px_0px_rgb(0,0,0,0.25)]">
+        <table>
+          <tr>
+            <td><img class="max-w-min mr-2.5" src="../images/icon-todo.svg" alt=""></td>
+            <td><a href="#">Todo list</a></td>
+          </tr>
+          <tr>
+            <td><img class="max-w-min mr-2.5" src="../images/icon-calendar.svg" alt=""></td>
+            <td><a href="#">Calendar</a></td>
+          </tr>
+          <tr>
+            <td><img class="max-w-min mr-2.5" src="../images/icon-reminders.svg" alt=""></td>
+            <td><a href="#">Reminders</a></td>
+          </tr>
+          <tr>
+            <td><img class="max-w-min mr-2.5" src="../images/icon-planning.svg" alt=""></td>
+            <td><a href="#">Planning</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="relative cursor-pointer" onclick="this.children[1].classList.toggle('hidden')">
+      <div class="flex gap-x-2 items-center">Company<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3.5 h-3.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+      </svg>
+      </div>
+      <div class="relative hidden md:absolute md:top-8 px-4 pt-2 md:py-3.5 *:py-0.5 *:block *:whitespace-nowrap border rounded-md border-transparent md:shadow-[0_0_30px_0px_rgb(0,0,0,0.25)]">
+        <a href="#">History</a>
+        <a href="#">Our Team</a>
+        <a href="#">Blog</a>
+      </div>
+    </div>
+    <a href="#">Careers</a>
+    <a href="#">About</a>
+    <div class="md:ml-auto text-center"><button>Login</button></div>
+    <div><button class="w-full px-3.5 rounded-md ring-2 ring-current ring-offset-[3px]">Register</button></div>
+  </div>
+
+  <div >
+    <div>
+      <img
+              srcset="../images/image-hero-mobile.png 640w,
+                ../images/image-hero-desktop.png 960w
+               "
+              sizes="(max-width: 640px) 640px,
+               960px"
+              src="../images/image-hero-desktop.png" alt="">
+    </div>
+  </div>
+</div>
+</body>
+</html>
