@@ -1028,6 +1028,11 @@ video {
   --tw-ring-offset-color: hsl(0, 0%, 98%);
 }
 
+.hover\:\*\:text-neutral-700 > *:hover {
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 8% / var(--tw-text-opacity));
+}
+
 @media (min-width: 400px) {
   .min-\[400px\]\:grid-flow-col {
     grid-auto-flow: column;
