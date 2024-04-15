@@ -107,6 +107,8 @@ header {
     top: 0;
     right: 0;
 
+    padding-top: 13em;
+
     display: flex;
     flex-direction: column;
     gap: 1.3rem;
@@ -114,9 +116,9 @@ header {
 .menu__links_opened > * {
     margin-left: 1.3em;
 }
-.menu__links_opened > *:first-child {
-    margin-top: 13em;
-}
+/*.menu__links_opened > *:first-child {*/
+/*    margin-top: 13em;*/
+/*}*/
 @media (width > 500px) {
     :root {
         font-size: clamp(14px, 14px + 0.13vw, 16px);
