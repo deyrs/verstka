@@ -12,7 +12,7 @@
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
 </head>
-<body class="font-epilogue text-neutral-500 font-neutral overflow-hidden bg-neutral-50">
+<body class="font-epilogue text-neutral-500 font-neutral has-[.requires-no-scroll]:overflow-hidden bg-neutral-50">
 <div class="overlay bg-neutral-300 opacity-95 bg-transparent pb-24">
   <div class="flex justify-between items-start p-6 sm:py-6 w-full max-w-screen-xl mx-auto">
     <img src="../images/logo.svg" alt="" class="mr-16">
@@ -93,22 +93,6 @@
 </div>
 
 <script>
-  function arrowsControl(element) {
-    console.log(element)
-
-
-    // if (e.classList.contains('hidden')) {
-    //   e.children[0].children[0].classList.toggle('hidden');
-    //   e.children[0].children[1].classList.toggle('hidden');
-    // }
-    // if (!e.classList.contains('hidden')) {
-    //   e.children[0].children[0].classList.toggle('hidden');
-    //   e.children[0].children[1].classList.toggle('hidden');
-    // }
-  }
-
-
-
   const menuDrawer = document.querySelector('.menuDrawer');
 
   function handleClick(menu) {
@@ -136,6 +120,7 @@
     toggleMenu.children[0].classList.toggle('hidden');
     toggleMenu.children[1].classList.toggle('hidden');
     menuDrawer.classList.toggle('hidden');
+    menuDrawer.classList.toggle('requires-no-scroll');
     overlay.classList.toggle('bg-transparent')
   })
 

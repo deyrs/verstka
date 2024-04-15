@@ -26,6 +26,11 @@
     padding: 0;
     font: inherit;
 }
+
+body:has(.menu__links_opened) {
+    overflow: hidden;
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -49,8 +54,6 @@ body {
 }
 .body_overlay {
     background-color: hsl(240, 4%, 79%);
-    pointer-events: none;
-    touch-action: none;
     opacity: 85%;
 }
 .wrapper {
