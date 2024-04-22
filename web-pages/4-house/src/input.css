@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.clickable:hover {
+    color: #598D66;
+}
+.clickable:active {
+    color: #376B44;
+}
+
+.button {
+    @apply text-primary-200 border-[1px] border-primary-200 px-8 py-2.5 lg:text-lg;
+}
+.button:hover {
+    @apply text-primary-0 bg-primary-200;
+}
+.button:active {
+    @apply bg-primary-300 border-primary-300;
+}
+
+.button_accent {
+    @apply text-primary-900 bg-accent-200 px-8 py-2.5 lg:text-lg;
+}
+.button_accent:hover {
+    @apply bg-accent-100;
+}
+.button_accent:active {
+    @apply bg-accent-300;
+}
+
+
+.tab {
+    @apply bg-primary-100 px-5 rounded-full lg:text-lg;
+}
+.tab_active {
+    @apply text-primary-0 bg-primary-300;
+}

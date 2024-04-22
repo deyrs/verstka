@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="text-primary-900 text-lg font-medium">
+<header class="bg-primary-100 mb-12 sm:mb-4">
+    <div class="mx-auto max-w-screen-lg lg:flex justify-between items-center ">
+        <div class="px-4 py-3 bg-primary-0 sm:bg-primary-100 text-center">
+            <img src="../assets/site-logo.svg" alt="" class="max-h-7 lg:max-h-8 inline">
+        </div>
+
+        <hr class="mx-4 hidden sm:block lg:hidden border-[1px] border-primary-700"/>
+
+        <div class="flex justify-between items-center relative">
+            <div class="menu flex flex-col sm:flex-row absolute sm:static top-0 gap-4 w-full bg-primary-100 py-3" x-data="{open: false}">
+                <button class="menu__button clickable sm:hidden mx-4" @click="open = !open">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+
+                <div class="menu__drawer flex-col sm:flex sm:flex-row gap-y-4 gap-x-12 text-center ml-4 mr-12" :class="open ? 'flex' : 'hidden'">
+                    <a href="#" class="clickable">Репродукции</a>
+                    <a href="#" class="clickable">Новинки</a>
+                    <a href="#" class="clickable">О нас</a>
+                </div>
+            </div>
+
+            <button class="ml-auto mr-4 clickable">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+<section class="mx-auto max-w-screen-lg flex items-center px-4 md:px-8 max-sm:mb-8 max-sm:pt-8">
+    <img src="../assets/hero-image.png" alt="" class="hidden sm:block object-scale-down basis-[47%] w-full max-h-[80vh]">
+    <div class="sm:basis-[53%] space-y-4 md:space-y-6 lg:space-y-8">
+        <h1 class="text-3xl md:text-5xl lg:text-6xl">Реплики картин от <span class="text-primary-200">Ink. House</span></h1>
+        <p class="text-primary-800 text-sm md:text-vase lg:text-lg">Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные цены.</p>
+        <button class="button">Продукция</button>
+    </div>
+</section>
+
+<section class="mx-auto max-w-screen-lg p-4 mb-[50px] md:mb-[70px]"
+        x-data="{
+            reproductionsByCountry: [],
+            activeCountry: 'Франция'
+            }"
+        x-init="
+            fetch('./reproductions.json')
+                .then((response) => response.json())
+                .then((data) => {
+                  reproductionsByCountry = data;
+                  console.log(data['Франция'])
+                  })"
+>
+    <template x-if="reproductionsByCountry">
+        <div class="flex flex-col gap-y-4 md:flex-row justify-between mb-5 md:mb-7">
+            <h1 class="text-xl md:text-3xl lg:text-[40px]">Репродукции</h1>
+            <div class="flex gap-x-8 overflow-scroll">
+                <template x-for="country in Object.keys(reproductionsByCountry)">
+                    <button x-text="country"
+                            x-bind:class="[country === activeCountry ? 'tab_active' : '']"
+                            x-on:click="activeCountry = country"
+                            class="tab"></button>
+                </template>
+            </div>
+        </div>
+    </template>
+
+    <template x-if="reproductionsByCountry[activeCountry]">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-[30px] justify-items-stretch">
+            <template x-for="reproduction in reproductionsByCountry[activeCountry]">
+                <div class="reproduction-card flex flex-col p-5 bg-primary-100">
+                    <img x-bind:src="reproduction.image" alt="" class="reproduction-card__img mb-2">
+                    <p x-text="reproduction.author" class="reproduction-card__author text-primary-800 mb-2.5"></p>
+                    <p x-text="reproduction.name" class="reproduction-card__name mb-2 text-2xl md:text-3xl"></p>
+                    <p x-text="reproduction.details" class="reproduction-card__details mb-7"></p>
+                    <p x-text="reproduction.price" class="reproduction-card__price mb-3 text-2xl text-primary-200"></p>
+                    <button class="button">В корзину</button>
+                </div>
+            </template>
+        </div>
+    </template>
+</section>
+
+<section class="text-primary-0 bg-announce-section-bg-image bg-center bg-cover px-4 py-12 mb-[50px] md:mb-[70px]">
+    <div class="max-w-screen-lg mx-auto">
+        <div class="lg:w-1/2">
+            <div class="flex items-center md:items-end gap-5 mb-7">
+                <img src="../assets/announce-section-icon.png" alt="" class="size-12 md:size-16">
+                <h1 class="text-2xl md:text-3xl lg:text-[40px] leading-none">Новая коллекция<br/> французских авторов</h1>
+            </div>
+            <p class="mb-7 lg:mb-12 leading-normal max-sm:text-base">
+                Сложно сказать, почему акционеры крупнейших компаний призывают нас к новым свершениям, которые, в свою очередь, должны быть заблокированы в рамках своих собственных рациональных ограничений.<br /><br />
+                Принимая во внимание показатели успешности, граница обучения кадров предопределяет высокую востребованность направлений прогрессивного развития.
+            </p>
+            <button class="button_accent max-sm:w-full">Ознакомиться</button>
+        </div>
+    </div>
+</section>
+<section class="max-w-screen-lg mx-auto px-4 grid gap-7 lg:grid-cols-[40%_60%] mb-[50px] md:mb-[70px]">
+    <img src="../assets/our-team_section-image.png" alt="">
+    <div class="flex flex-col gap-5 justify-end lg:mb-[44px]">
+        <h1 class="text-2xl md:text-3xl lg:text-[40px] leading-none">Наша команда</h1>
+        <p class="leading-normal max-sm:text-base">Значимость этих проблем настолько очевидна, что базовый вектор развития позволяет оценить значение экспериментов, поражающих по своей масштабности и грандиозности. Мы вынуждены отталкиваться от того, что консультация с широким активом.</p>
+        <div class="flex justify-between max-w-[300px] max-sm:max-w-[220px] *:max-sm:max-h-[60px]">
+            <img src="../assets/our-team_person-1.png" alt="">
+            <img src="../assets/our-team_person-2.png" alt="">
+            <img src="../assets/our-team_person-3.png" alt="">
+        </div>
+    </div>
+</section>
+
+<footer class="bg-primary-100">
+    <div class="max-w-screen-lg mx-auto px-4 py-5  flex flex-col lg:flex-row lg:gap-x-28">
+        <div class="flex justify-between items-center mb-6 lg:flex-col lg:items-start gap-9">
+            <img src="../assets/site-logo.svg" alt="" class="inline-block max-h-[35px]">
+            <div class="hidden sm:block">
+                <a href="tel:+79995435454" class="clickable inline-block mb-2">+7 (999) 543-54-54</a>
+                <p class="text-primary-800">Мастерская</p>
+            </div>
+        </div>
+
+        <div class="flex justify-between flex-grow lg:justify-start lg:gap-x-16 max-sm:grid max-sm:grid-cols-2 max-sm:gap-x-12 max-sm:gap-y-6 ">
+            <div class="sm:hidden">
+                <a href="tel:+79995435454" class="clickable inline-block mb-2">+7 (999) 543-54-54</a>
+                <p class="text-primary-800">Мастерская</p>
+            </div>
+            <div class="flex flex-col">
+                <h2 class="mb-2">Репродукции</h2>
+                <a href="#" class="text-primary-800 clickable">Франция</a>
+                <a href="#" class="text-primary-800 clickable">Германия</a>
+                <a href="#" class="text-primary-800 clickable">Англия</a>
+            </div>
+            <div class="flex flex-col">
+                <h2 class="mb-2">Новинки</h2>
+                <a href="#" class="text-primary-800 clickable">2021</a>
+                <a href="#" class="text-primary-800 clickable">2020</a>
+            </div>
+            <div class="flex flex-col">
+                <h2 class="mb-2">О нас</h2>
+                <a href="#" class="text-primary-800 clickable">Художники</a>
+                <a href="#" class="text-primary-800 clickable">Менеджеры</a>
+            </div>
+            <div class="flex flex-col max-sm:hidden md:mr-3 lg:ml-auto">
+                <div class="flex gap-6 items-center mb-2">
+                    <a href="#"><img src="../assets/sn-icons/fb.svg" alt="" class="h-6"></a>
+                    <a href="#"><img src="../assets/sn-icons/inst.svg" alt="" class="h-5"></a>
+                    <a href="#"><img src="../assets/sn-icons/yt.svg" alt="" class="h-6"></a>
+                </div>
+                <p class="text-primary-800">Ink. House ®</p>
+                <p class="text-primary-800">All rights reserved</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center sm:hidden pt-4 border-t-[1px] border-primary-700">
+            <div class="flex items-center gap-6 mb-2">
+                <a href="#"><img src="../assets/sn-icons/fb.svg" alt="" class="h-6"></a>
+                <a href="#"><img src="../assets/sn-icons/inst.svg" alt="" class="h-5"></a>
+                <a href="#"><img src="../assets/sn-icons/yt.svg" alt="" class="h-6"></a>
+            </div>
+            <div class="flex">
+                <p class="text-primary-800">Ink. House ®</p>
+                <p class="text-primary-800">All rights reserved</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
