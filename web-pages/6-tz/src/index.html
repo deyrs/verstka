@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Webbooster</title>
+</head>
+<body class="bg-[#F2F2F4]">
+<div class="bg-1 bg-cover bg-bottom">
+    <div class="max-w-screen-xl mx-auto p-4  flex flex-col">
+<!--        <div class="flex justify-between items-center text-white">-->
+<!--            <span class="text-3xl font-bold">SEMITEX</span>-->
+<!--            <div class="max-xl:hidden flex gap-x-9">-->
+<!--                <a href="#">Каталог</a>-->
+<!--                <a href="#">Производители</a>-->
+<!--                <a href="#">Для кого мы работаем</a>-->
+<!--                <a href="#">Сертификаты</a>-->
+<!--                <a href="#">О нас</a>-->
+<!--                <a href="#">FAQ</a>-->
+<!--                <a href="#">Контакты</a>-->
+<!--            </div>-->
+<!--            <a href="tel:+78123135845" class="align-middle whitespace-nowrap">-->
+<!--                <img src="../assets/icons/tel.png" alt="" class="inline-block max-h-[26px]">-->
+<!--                +7 (812) 313-58-45-->
+<!--            </a>-->
+<!--        </div>-->
+
+        <div class="flex max-xl:flex-col justify-between items-center gap-4   w-full mx-auto p-4   text-white">
+            <div class="flex justify-between items-center max-xl:w-full">
+                <span class="text-3xl font-bold">SEMITEX</span>
+                <button class="nav-toggle-button xl:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="nav-element hidden flex xl:flex flex-col xl:flex-row xl:items-center gap-x-9 gap-y-4 max-xl:w-full">
+                <a href="#" class="clickable">Каталог</a>
+                <a href="#" class="clickable">Производители</a>
+                <a href="#" class="clickable">Для кого мы работаем</a>
+                <a href="#" class="clickable">О нас</a>
+                <a href="#" class="clickable">FAQ</a>
+                <a href="#" class="clickable">Контакты</a>
+            </div>
+            <a href="tel:+78123135845" class="align-middle whitespace-nowrap nav-element hidden xl:inline clickable text-lg xl:text-xl max-xl:mr-auto">
+                <img src="../assets/icons/tel.png" alt="" class="inline-block max-h-[26px]">
+                +7 (812) 313-58-45
+            </a>
+        </div>
+
+        <div class="md:flex justify-around xl:mt-16 my-6 md:my-12 xl:my-32 max-md:space-y-4">
+            <div class="space-y-4 col-span-2 md:max-w-[600px] xl:max-w-[850px] ">
+                <h1 class="text-3xl lg:text-4xl xl:text-[54px]/tight text-white font-bold">ОПТОВЫЕ ПОСТАВКИ<br/> <span class="text-[#969AF7]">электронных компонентов</span><br/> ИЗ КИТАЯ день в день</h1>
+                <p class="xl:text-lg/snug text-[#969AF7] md:max-w-[70%]">Комплексные поставки электронных компонентов и оборудования. Подберем аналоги популярных брендов из Европы в условиях санкций.</p>
+                <ul class="bg-gradient-to-r from-[#969af74d] to-[#969af700] rounded-lg px-6 py-4
+                           text-white *:xl:text-lg/snug list-image-[url(../assets/icons/check.png)] *:before:content-['\0020'] list-inside">
+                    <li>Отсрочка платежей для постоянных клиентов</li>
+                    <li>Бесплатная доставка по Москве и СПБ в течение 2х часов</li>
+                    <li>Квалифицированный персональный менеджер</li>
+                </ul>
+            </div>
+            <div class="shadow-md rounded-lg overflow-hidden min-w-[300px] self-start">
+                <div class="p-6 max-md:py-4 bg-gradient-to-b from-[#6A32B4] to-[#552693]">
+                    <p class="text-xl font-bold text-white text-center">
+                        ЗАКАЖИТЕ ОБРАТНЫЙ ЗВОНОК
+                    </p>
+                </div>
+                <div>
+                    <form class="bg-white p-6">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="username">
+                                Ваше имя*
+                            </label>
+                            <input class="bg-purple-50 shadow appearance-none rounded w-full py-2 px-3 text-lg text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Петров Петр">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="password">
+                                Ваш номер*
+                            </label>
+                            <input class="bg-purple-50 shadow appearance-none rounded w-full py-2 px-3 text-lg text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="tel" placeholder="+7 (_ _ _) _ _ _-_ _-_ _">
+                        </div>
+                        <button class="bg-amber-500 hover:bg-amber-600 text-lg text-white py-2 px-4 w-full rounded-lg focus:outline-none focus:shadow-outline" type="button">
+                            Заказать звонок
+                        </button>
+                        <div class="flex items-center gap-x-2.5 mt-2">
+                            <img src="../assets/icons/form-lock.png" alt="">
+                            <p class="text-xs leading-none text-gray-700">Мы гарантируем<br/> конфиденциальность данных</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="my-8 md:my-16 max-w-[1100px] mx-auto p-4">
+
+    <div class="text-center grid justify-center md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-8">
+        <div class="md:text-center md:col-span-2 xl:col-span-3 mb-2">
+            <h2 class="text-3xl font-bold mb-3">Почему с нами выгодно</h2>
+            <p class="md:text-xl">С 1996 года мы занимаемся оптовыми поставками электронных компонентов от ведущих производителей из Европы
+                и Азии для Российских потребителей. </p>
+        </div>
+        <div class="why-us__card"><img src="../assets/cards-images/1.png" alt="">
+            <h3>Качественная продукция</h3>
+            <p>Все наши товары сертифицированы и имеют сопроводительную документацию.</p>
+        </div>
+        <div class="why-us__card"><img src="../assets/cards-images/2.png" alt="">
+            <h3>Индивидуальный подход</h3>
+            <p>Возможность изготовления компонентов специально для вас
+                на заводах-изготовителя.</p>
+        </div>
+        <div class="why-us__card"><img src="../assets/cards-images/3.png" alt="">
+            <h3>Бесплатная доставка</h3>
+            <p>При наличии товара на складе и заказе от 10 000 рублей,
+                доставим бесплатно по Москве и СПБ в течение 2х часов.</p>
+        </div>
+        <div class="why-us__card"><img src="../assets/cards-images/4.png" alt="">
+            <h3>Подбираем аналоги</h3>
+            <p>Поможем подобрать аналоги популярных европейских брендов
+                в условиях санкций.</p>
+        </div>
+        <div class="why-us__card"><img src="../assets/cards-images/5.png" alt="">
+            <h3>Резервный запас компонентов</h3>
+            <p>Хранение товара на наших складах для постоянных клиентов.</p>
+        </div>
+        <div class="why-us__card"><img src="../assets/cards-images/6.png" alt="">
+            <h3>Гибкая система оплаты</h3>
+            <p>Отсрочка платежей для постоянных клиентов.</p>
+        </div>
+    </div>
+</div>
+
+<div class="bg-2 bg-top px-4 pt-[110px]">
+    <div class="max-w-screen-xl mx-auto text-white">
+        <h2 class="text-center text-3xl font-bold">Наши производители</h2>
+    </div>
+</div>
+
+<div class="bg-2 bg-bottom px-4 pt-[30px] pb-[110px]">
+    <div class="max-w-screen-xl mx-auto flex justify-between items-center gap-4">
+        <button class="our-clients__chevron our-clients__scroll-button our-clients__scroll-button_left">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 h-5 mr-0.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+        </button>
+
+        <div class="max-w-screen-[1100px] mx-auto flex gap-[18px] overflow-scroll our-clients">
+            <div class="our-clients__card">
+                <img src="../assets/our-clients/1.png" alt="">
+            </div>
+            <div class="our-clients__card">
+                <img src="../assets/our-clients/2.png" alt="">
+            </div>
+            <div class="our-clients__card">
+                <img src="../assets/our-clients/3.png" alt="">
+            </div>
+            <div class="our-clients__card">
+                <img src="../assets/our-clients/4.png" alt="">
+            </div>
+            <div class="our-clients__card">
+                <img src="../assets/our-clients/5.png" alt="">
+            </div>
+        </div>
+        <button class="our-clients__chevron our-clients__scroll-button our-clients__scroll-button_right">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+        </button>
+    </div>
+
+    <div class="max-w-[1100px] mx-auto text-white ">
+        <p class="mt-[42px] text-xl">
+            Lorem ipsum dolor sit amet consectetur. Non eget blandit in euismod felis id quisque nunc. Non orci lacus elit mauris velit gravida imperdiet id. Ipsum pulvinar ac ut sociis. Sed magna gravida consequat et euismod aenean quis mauris. Ut etiam egestas ultrices faucibus ultrices nisl enim consequat faucibus. Nibh id leo ullamcorper eleifend. Id at commodo interdum et leo.
+        </p>
+    </div>
+</div>
+
+
+<section class="relative z-60">
+    <div class="my-8 md:my-16 max-w-[1100px] mx-auto p-4 space-y-8">
+        <div class="text-center mb-5">
+            <h2 class="text-3xl font-bold mb-3">Схема работы</h2>
+            <p class="md:text-xl">Lorem ipsum dolor sit amet consectetur. Augue velit in enim sagittis imperdiet sit mauris. Vitae sit in fusce massa amet.</p>
+        </div>
+
+        <ol class="scheme grid justify-center md:grid-cols-2 xl:grid-cols-3 auto-rows-fr gap-x-6 gap-y-8">
+            <li class="scheme__card relative z-[6]">
+                <div class="scheme__card-contents">
+                    <div>
+                        <div>01</div>
+                        <h3>ВЫ ОСТАВЛЯЕТЕ ЗАЯВКУ</h3>
+                    </div>
+                    <p>Отправить запрос вы можете любым удобным для вас способом: например, через форму на сайте. Также вы можете связаться с нами напрямую.</p>
+                </div>
+            </li>
+            <li class="scheme__card relative z-[5]">
+                <div class="scheme__card-contents">
+                    <div>
+                        <div>02</div>
+                        <h3>МЫ ПРОВЕРЯЕМ НАЛИЧИЕ ПОЗИЦИЙ</h3>
+                    </div>
+                    <p >Проверяем наличие на складе,
+                        а также актуальность производства (возможна замена, если необходимо.) Если требуется замена - подбираем аналоги и привозим на заказ.
+                    </p>
+                </div>
+            </li>
+            <li class="scheme__card relative">
+                <div class="scheme__card-contents">
+                    <div>
+                        <div>03</div>
+                        <h3>ФОРМИРУЕМ КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ</h3>
+                    </div>
+                    <p>На данном этапе мы с вами согласуем ценовое предложение, обговариваем сроки поставки и условия оплаты.</p>
+                </div>
+            </li>
+            <li class="scheme__card relative">
+                <div class="scheme__card-contents">
+                    <div>
+                        <div>04</div>
+                        <h3>ПРОВОДИМ ОПЛАТУ</h3>
+                    </div>
+                    <p>Далее, после получения авансового платежа, мы размещаем заказ.</p>
+                </div>
+            </li>
+            <li class="scheme__card relative z-[2]">
+                <div class="scheme__card-contents">
+                    <div>
+                        <div>05</div>
+                        <h3>МЫ ВЫПОЛНЯЕМ ЗАКАЗ</h3>
+                    </div>
+                    <p>Товар поступает на склад в Москву или Санкт-Петербург, где мы сверяем правильность поставки и начинаем сборку.</p>
+                </div>
+            </li>
+            <li class="scheme__card relative z-[1]">
+                <div class="scheme__card-contents">
+                    <div>
+                        <div>06</div>
+                        <h3>ВЫ ПОЛУЧАЕТЕ ТОВАР</h3>
+                    </div>
+                    <p>Поставляем вам товар в надлежащей упаковке в сопровождении оригиналов всех необходимых документов либо вы забираете его самовывозом.</p>
+                </div>
+            </li>
+        </ol>
+
+        <div class="md:grid grid-cols-4 xl:grid-cols-3 gap-x-6">
+            <button class="w-full col-start-2 col-end-4 xl:col-end-3
+            bg-amber-500 hover:bg-amber-600 text-lg text-white py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline" type="button">
+                Оставить заявку
+            </button>
+        </div>
+
+
+    </div>
+</section>
+
+
+<section class="bg-4 bg-top">
+    <div class="max-w-[1100px] mx-auto px-4 pt-[144px] pb-[95px]">
+        <h2 class="mb-[40px] md:text-center text-3xl text-white font-bold">Ответы на самые популярные вопросы в сфере</h2>
+        <div class="accordion">
+            <div class="accordion__item">
+                <div>
+                    <h3>Lorem ipsum dolor sit amet consectetur. Ultrices aliquam.</h3>
+                    <div class="accordion__chevron"></div>
+                </div>
+                <p>Like the phrase “stem cell” itself, “stem cell therapy” is often used to describe a variety of different medical therapies that utilize stem cells in some form to treat a patient. Sometimes the term is used incorrectly to refer to platelet rich plasma (PRP) injections. The term is also used to refer to stem cell transplants, also known as bone marrow transplants.
+
+                    Most commonly “stem cell therapy” is used to describe a procedure where the patient’s adult stem cells and other potentially regenerative cells are harvested from a tissue sample of either fat or bone marrow taken from the patient. These concentrated regenerative cells are then used to treat specific injuries typically by injecting them into the afflicted area. It should be said that this type of stem cell therapy is currently not FDA approved and clinics performing it illegally in the US or in other countries perform various versions of the procedure to treat illnesses and injuries with little to no clinical evidence.
+
+                    At InGeneron we use the term “regenerative cell therapy” since there are many different cell types and regenerative properties collected and used by our therapy along with adult stem cells. Importantly we do not treat patients outside of our approved clinical trials and we are dedicated to securing FDA approval through rigorous clinical testing.
+                </p>
+            </div>
+            <div class="accordion__item">
+                <div>
+                    <h3>Lorem ipsum dolor sit amet consectetur. Ultrices aliquam.</h3>
+                    <div class="accordion__chevron"></div>
+                </div>
+                <p>Like the phrase “stem cell” itself, “stem cell therapy” is often used to describe a variety of different medical therapies that utilize stem cells in some form to treat a patient. Sometimes the term is used incorrectly to refer to platelet rich plasma (PRP) injections. The term is also used to refer to stem cell transplants, also known as bone marrow transplants.
+
+                    Most commonly “stem cell therapy” is used to describe a procedure where the patient’s adult stem cells and other potentially regenerative cells are harvested from a tissue sample of either fat or bone marrow taken from the patient. These concentrated regenerative cells are then used to treat specific injuries typically by injecting them into the afflicted area. It should be said that this type of stem cell therapy is currently not FDA approved and clinics performing it illegally in the US or in other countries perform various versions of the procedure to treat illnesses and injuries with little to no clinical evidence.
+
+                    At InGeneron we use the term “regenerative cell therapy” since there are many different cell types and regenerative properties collected and used by our therapy along with adult stem cells. Importantly we do not treat patients outside of our approved clinical trials and we are dedicated to securing FDA approval through rigorous clinical testing.
+                </p>
+            </div>
+            <div class="accordion__item">
+                <div>
+                    <h3>Lorem ipsum dolor sit amet consectetur. Ultrices aliquam.</h3>
+                    <div class="accordion__chevron"></div>
+                </div>
+                <p>Like the phrase “stem cell” itself, “stem cell therapy” is often used to describe a variety of different medical therapies that utilize stem cells in some form to treat a patient. Sometimes the term is used incorrectly to refer to platelet rich plasma (PRP) injections. The term is also used to refer to stem cell transplants, also known as bone marrow transplants.
+
+                    Most commonly “stem cell therapy” is used to describe a procedure where the patient’s adult stem cells and other potentially regenerative cells are harvested from a tissue sample of either fat or bone marrow taken from the patient. These concentrated regenerative cells are then used to treat specific injuries typically by injecting them into the afflicted area. It should be said that this type of stem cell therapy is currently not FDA approved and clinics performing it illegally in the US or in other countries perform various versions of the procedure to treat illnesses and injuries with little to no clinical evidence.
+
+                    At InGeneron we use the term “regenerative cell therapy” since there are many different cell types and regenerative properties collected and used by our therapy along with adult stem cells. Importantly we do not treat patients outside of our approved clinical trials and we are dedicated to securing FDA approval through rigorous clinical testing.
+                </p>
+            </div>
+            <div class="accordion__item">
+                <div>
+                    <h3>Lorem ipsum dolor sit amet consectetur. Ultrices aliquam.</h3>
+                    <div class="accordion__chevron"></div>
+                </div>
+                <p>Like the phrase “stem cell” itself, “stem cell therapy” is often used to describe a variety of different medical therapies that utilize stem cells in some form to treat a patient. Sometimes the term is used incorrectly to refer to platelet rich plasma (PRP) injections. The term is also used to refer to stem cell transplants, also known as bone marrow transplants.
+
+                    Most commonly “stem cell therapy” is used to describe a procedure where the patient’s adult stem cells and other potentially regenerative cells are harvested from a tissue sample of either fat or bone marrow taken from the patient. These concentrated regenerative cells are then used to treat specific injuries typically by injecting them into the afflicted area. It should be said that this type of stem cell therapy is currently not FDA approved and clinics performing it illegally in the US or in other countries perform various versions of the procedure to treat illnesses and injuries with little to no clinical evidence.
+
+                    At InGeneron we use the term “regenerative cell therapy” since there are many different cell types and regenerative properties collected and used by our therapy along with adult stem cells. Importantly we do not treat patients outside of our approved clinical trials and we are dedicated to securing FDA approval through rigorous clinical testing.
+                </p>
+            </div>
+            <div class="accordion__item">
+                <div class="accordion__header">
+                    <h3>Lorem ipsum dolor sit amet consectetur. Ultrices aliquam.</h3>
+                    <div class="accordion__chevron"></div>
+                </div>
+                <p>Like the phrase “stem cell” itself, “stem cell therapy” is often used to describe a variety of different medical therapies that utilize stem cells in some form to treat a patient. Sometimes the term is used incorrectly to refer to platelet rich plasma (PRP) injections. The term is also used to refer to stem cell transplants, also known as bone marrow transplants.
+
+                    Most commonly “stem cell therapy” is used to describe a procedure where the patient’s adult stem cells and other potentially regenerative cells are harvested from a tissue sample of either fat or bone marrow taken from the patient. These concentrated regenerative cells are then used to treat specific injuries typically by injecting them into the afflicted area. It should be said that this type of stem cell therapy is currently not FDA approved and clinics performing it illegally in the US or in other countries perform various versions of the procedure to treat illnesses and injuries with little to no clinical evidence.
+
+                    At InGeneron we use the term “regenerative cell therapy” since there are many different cell types and regenerative properties collected and used by our therapy along with adult stem cells. Importantly we do not treat patients outside of our approved clinical trials and we are dedicated to securing FDA approval through rigorous clinical testing.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="bg-[#333333]">
+    <div class="max-w-screen-xl mx-auto py-[50px] px-4 grid grid-cols-[repeat(2,_max-content)] md:grid-cols-[repeat(3,_200px)] xl:flex gap-4 justify-around items-center text-white">
+        <span class="text-3xl font-bold">SEMITEX</span>
+        <a href="#">Каталог</a>
+        <a href="#">Производители</a>
+        <a href="#">Для кого мы работаем</a>
+        <a href="#">Сертификаты</a>
+        <a href="#">О нас</a>
+        <a href="#">FAQ</a>
+        <a href="#">Контакты</a>
+        <button class="bg-[#969AF7] hover:bg-[#757AEF] text-lg text-white py-2 px-4 max-md:my-2 rounded-lg focus:outline-none focus:shadow-outline w-full col-span-2 md:col-span-1 xl:max-w-[260px]" type="button">
+            Заказать звонок
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<script>
+    const properties = {
+        sm: [
+            ['add_b', 'z-[6]', 'gr-b'],
+            ['sub_t', 'add_b', 'z-[5]', 'gr-b'],
+            ['sub_t', 'add_b', 'z-[4]', 'gr-b'],
+            ['sub_t', 'add_b', 'z-[3]', 'gr-b'],
+            ['sub_t', 'add_b', 'z-[2]', 'gr-b'],
+            ['sub_t', 'z-[1]', 'gr-b'],
+        ],
+        md: [
+            ['add_r', 'z-[6]', 'gr-r'],
+            ['sub_l', 'add_b', 'z-[5]', 'gr-b'],
+            ['sub_t', 'add_l',  'order-2', 'z-[4]', 'gr-l'],
+            ['sub_r', 'add_b', 'order-1', 'z-[3]', 'gr-b'],
+            ['sub_t', 'add_r', 'order-3', 'z-[2]', 'gr-r'],
+            ['sub_l', 'order-4', 'z-[1]', 'gr-r'],
+        ],
+        xl: [
+            ['add_r', 'z-[6]', 'gr-r'],
+            ['sub_l', 'add_r', 'z-[5]', 'gr-r'],
+            ['sub_l', 'add_b', 'z-[4]', 'gr-b'],
+            ['sub_t', 'add_l', 'order-3', 'z-[3]', 'gr-l'],
+            ['sub_r', 'add_l', 'order-2', 'z-[2]', 'gr-l'],
+            ['sub_r', 'order-1', 'z-[1]', 'gr-l'],
+        ]
+    }
+
+    let windowSize = '';
+    const scheme = [...document.querySelector('.scheme').children];
+    const resizeObserve = new ResizeObserver(element => {
+        const width = element[0].contentBoxSize[0].inlineSize;
+        let currentWindowSize = '';
+        if (width >= 1280) {
+            currentWindowSize = 'xl';
+        } else if (768 <= width && width < 1280) {
+            currentWindowSize = 'md';
+        } else if (width < 768) {
+            currentWindowSize = 'sm';
+        }
+        if (currentWindowSize !== windowSize) {
+            windowSize = currentWindowSize;
+            for (let i in scheme) {
+                scheme[i].classList = 'scheme__card relative';
+                for (let property of properties[windowSize][i]) {+
+                    scheme[i].classList.toggle(property);
+                }
+            }
+        }
+    });
+    resizeObserve.observe(document.body);
+
+    const accordionItems = document.querySelectorAll('.accordion__item');
+    accordionItems.forEach(item => item.addEventListener('click', () => {
+        item.classList.toggle('accordion__item_active');
+    }));
+
+
+    const navToggleButton = document.querySelector('.nav-toggle-button');
+    const navElements = document.querySelectorAll('.nav-element');
+    navToggleButton.addEventListener('click', () => {
+        navElements.forEach(element => {
+            element.classList.toggle('hidden');
+        })
+    })
+
+    const ourClients = document.querySelector('.our-clients');
+    const ourClientsWidth = ourClients.scrollWidth;
+
+    function scrollClients() {
+        if (this.className.includes('left')) {
+            ourClients.scrollLeft -= 250;
+        } else {
+            ourClients.scrollLeft += 250;
+        }
+
+    }
+
+    const scrollClientsButtons = document.querySelectorAll('.our-clients__scroll-button');
+    scrollClientsButtons.forEach(button => button.addEventListener('click', scrollClients));
+</script>
+</body>
+</html>
