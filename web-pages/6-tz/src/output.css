@@ -1012,16 +1012,12 @@ video {
   padding-bottom: 110px;
 }
 
-.pb-\[47px\] {
-  padding-bottom: 47px;
+.pb-\[24px\] {
+  padding-bottom: 24px;
 }
 
 .pt-\[110px\] {
   padding-top: 110px;
-}
-
-.pt-\[144px\] {
-  padding-top: 144px;
 }
 
 .pt-\[30px\] {
@@ -1207,10 +1203,17 @@ video {
   font-size: 16px;
   color: white;
   border-radius: 0.75rem;
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 2.5rem;
+  padding-bottom: 1.25rem;
+}
+
+@media (min-width: 475px) {
+  .scheme__card {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+  }
 }
 
 .scheme__card .scheme__card-contents > :first-child {
@@ -1470,6 +1473,16 @@ video {
   .max-md\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+}
+
+@media (min-width: 475px) {
+  .sm\:pb-\[95px\] {
+    padding-bottom: 95px;
+  }
+
+  .sm\:pt-\[144px\] {
+    padding-top: 144px;
   }
 }
 
