@@ -51,7 +51,7 @@
 .scheme__card {
   font-size: 16px;
   color: white;
-  @apply rounded-xl max-xs:px-5 max-xs:py-8 p-7;
+  @apply rounded-xl max-xs:px-5 max-xs:py-8 xs:p-7;
 }
 .scheme__card .scheme__card-contents > :first-child {
   margin-bottom: 0.5rem;
