@@ -1206,8 +1206,11 @@ video {
 .scheme__card {
   font-size: 16px;
   color: white;
-  padding: 28px;
   border-radius: 0.75rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .scheme__card .scheme__card-contents > :first-child {

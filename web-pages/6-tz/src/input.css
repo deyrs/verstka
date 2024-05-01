@@ -51,8 +51,7 @@
 .scheme__card {
   font-size: 16px;
   color: white;
-  padding: 28px;
-  @apply rounded-xl;
+  @apply rounded-xl px-7 py-8;
 }
 .scheme__card .scheme__card-contents > :first-child {
   margin-bottom: 0.5rem;
