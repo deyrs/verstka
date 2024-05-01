@@ -1012,8 +1012,8 @@ video {
   padding-bottom: 110px;
 }
 
-.pb-\[95px\] {
-  padding-bottom: 95px;
+.pb-\[47px\] {
+  padding-bottom: 47px;
 }
 
 .pt-\[110px\] {
@@ -1351,6 +1351,7 @@ video {
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(#BDC0FF99, white 15%, #BDC0FF99 85%);
+  gap: 1rem;
   border-radius: 0.5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1436,10 +1437,6 @@ video {
 @media not all and (min-width: 1280px) {
   .max-xl\:mr-auto {
     margin-right: auto;
-  }
-
-  .max-xl\:hidden {
-    display: none;
   }
 
   .max-xl\:w-full {

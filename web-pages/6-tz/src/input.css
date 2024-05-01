@@ -174,7 +174,7 @@
   align-items: center;
 
   background: linear-gradient(#BDC0FF99, white 15%, #BDC0FF99 85%);
-  @apply py-4 rounded-lg;
+  @apply py-4 rounded-lg gap-4;
 }
 .accordion__item > :first-child h3 {
   @apply text-lg md:text-xl;
